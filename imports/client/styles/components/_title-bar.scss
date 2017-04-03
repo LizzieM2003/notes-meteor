@@ -16,3 +16,13 @@
 .title-bar__title {
   margin: 0;
 }
+
+.title-bar__nav-toggle {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+
+  @include desktop {
+    display: none;
+  }
+}
