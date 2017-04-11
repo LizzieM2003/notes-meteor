@@ -31,7 +31,12 @@ if (Meteor.isClient) {
     it('should remove note', function() {
       const selectedNoteId = notes[0]._id
       const wrapper = mount(<Editor note={notes[0]} selectedNoteId={selectedNoteId} call={call} browserHistory={browserHistory} />);
-      wrapper.find('button').simulate('click');
+      console.log(wrapper);
+      console.log(wrapper.find('button'));
+      console.log(wrapper.find('Modal'));
+      console.log(wrapper.find('#refButton'));
+      const modal = wrapper.find('Modal');
+      modal.nodes[0].props.children[1].props.simulate('click');
       expect(call).toHaveBeenCalledWith('notes.remove', selectedNoteId);
       expect(browserHistory.push).toHaveBeenCalledWith('/dashboard');
     });

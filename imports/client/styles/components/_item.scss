@@ -56,3 +56,14 @@
   padding: $space;
   text-align: center;
 }
+
+// Filter item
+.filter-item {
+  margin: 0 $space;
+  width: calc(100vw - #{$large-space});
+
+  @include desktop {
+    width: $input-default-width;
+  }
+
+}

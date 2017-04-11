@@ -23,12 +23,6 @@ if (Meteor.isClient) {
       expect(headerText).toBe(title);
     });
 
-    // it('should call the function', function() {
-    //   const spy = expect.createSpy();
-    //   spy(3, 4, 123);
-    //   expect(spy).toHaveBeenCalled();
-    // });
-
     it('should call handleLogout on click', function() {
       const spy = expect.createSpy();
       const wrapper = mount( <PrivateHeader title="Title" handleLogout={spy}/>);

@@ -21,5 +21,13 @@ if (Meteor.isClient) {
       expect(wrapper.find('NoteListItem').length).toBe(0);
       expect(wrapper.find('NoteListEmptyItem').length).toBe(1);
     });
+
+    it('should filter notes', function() {
+      const wrapper = mount(<NoteList notes={notes}/>);
+
+      wrapper.setState({ filter: 'test'});
+
+      expect(wrapper.find('NoteListItem').length).toBe(1);
+    });
   });
 }

@@ -20,8 +20,8 @@ export const PrivateHeader = (props) => {
 PrivateHeader.propTypes = {
   title: React.PropTypes.string.isRequired,
   handleLogout: React.PropTypes.func.isRequired,
-  isNavOpen: React.PropTypes.bool.isRequired,
-  handleNavToggle: React.PropTypes.func.isRequired
+  isNavOpen: React.PropTypes.bool,
+  handleNavToggle: React.PropTypes.func
 };
 
 export default createContainer(() => {
